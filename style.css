@@ -1,0 +1,166 @@
+/* style.css for Hershey Belle Samson | My Profile
+   Fonts (both free on Google Fonts, loaded in index.html):
+   - Headings: Dancing Script Bold, a flowing, hand-lettered feminine script
+   - Body: Quicksand Medium, a soft, rounded and very readable sans-serif
+   Each stack ends with web-safe fallbacks in case the font does not load. */
+
+/* Base: sizes use rem so everything scales with the browser's font setting */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Quicksand', 'Trebuchet MS', Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #fde8ee;
+  background-image: radial-gradient(#f9cfdb 2px, transparent 2px);
+  background-size: 28px 28px;
+  color: #4a3a3a;
+}
+
+/* Box model: padding, border, and margin on every card */
+header,
+main section,
+footer {
+  background-color: #fbf3e8;
+  border: 2px dotted #f0b8c8;
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 10px rgba(180, 99, 122, 0.15);
+  padding: 1rem 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+header {
+  background-color: #fff7f9;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-weight: 700;
+  color: #a14d68;
+  line-height: 1.3;
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 3.75rem;
+  height: 3px;
+  margin: 0.4rem auto 0;
+  background-color: #f0b8c8;
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+/* Links */
+a {
+  color: #a14d68;
+}
+
+a:hover {
+  color: #7a3550;
+  text-decoration-style: wavy;
+}
+
+/* Flexbox: photo next to the bio */
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.bio img {
+  flex: 0 0 auto;
+  width: 11rem;
+  height: 11rem;
+  object-fit: cover;
+  border: 4px solid #f0b8c8;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: #fff7f9;
+}
+
+.bio p {
+  flex: 1 1 auto;
+  margin: 0;
+  text-align: left;
+}
+
+/* Passion project card */
+article {
+  background-color: #fff7f9;
+  border-radius: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+ul {
+  list-style-position: inside;
+  padding: 0;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+/* Small screens: stack the photo above the bio */
+@media (max-width: 600px) {
+  .bio {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bio p {
+    text-align: center;
+  }
+
+  .bio img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  body {
+    padding: 0.75rem;
+  }
+
+  header,
+  main section,
+  footer {
+    padding: 0.75rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
